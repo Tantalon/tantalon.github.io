@@ -1,0 +1,66 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>End-to-End Editor</title>
+<style type="text/css" media="screen">
+    #editor {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+</style>
+</head>
+<body>
+
+<div id="editor">Feature: Template
+
+  Scenario: Preconditions
+    Given environment
+    Given credentials
+    Given selectors
+    Given browser "Firefox"
+
+  Scenario: open query routing settings page
+    When I click on "Load Balancing and Routing"
+    And I click on "Query Routing Policies"
+    And I click on "Query routing"
+    Then "Query Routing Policies" page must be displayed
+    And I should see "On" in "Query routing"
+
+
+  Scenario: add query routing table
+    When I click on "Add Rule"
+    And I set "Database" value to "All Databases"
+    And I set "User" value to "All Users"
+    And I set "Source" value to "All IPs"
+    And I click on "Add button"
+    Then I should see "All Databases. All Users. All IPs" in "Rule row"
+
+
+  Scenario: open rule list
+    When I click on "Gear"
+    Then I should see "Add rules" in "opened dialog title"
+
+
+  Scenario: add rule
+    When I click on "Add" button
+    And I set "Source Pattern" to "SELECT 123"
+    And I set "Route To" to "<any cluster>"
+    And I set "And/Or" to "AND"
+    And I check "Enabled" checkbox
+    And I click on "Save" button
+    Then I should see "SELECT 123" in "pattern row"
+
+
+  Scenario: close all dialogs
+    When I click on "Close"
+    And I click on "Close"
+    Then "Clusters" page should be displayed
+</div>
+
+<script src="dist/index.js"></script>
+
+</body>
+</html>
