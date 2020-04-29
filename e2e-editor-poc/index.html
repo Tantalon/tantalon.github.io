@@ -1,16 +1,10 @@
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<title>End-to-End Editor</title>
-<style type="text/css" media="screen">
-#editor {
-	position: absolute;
-	left: 0;
-	top: 0;
-	right: 0;
-	bottom: 0;
-}
-</style>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>End-to-End Editor</title>
+	<style>body { display: none; }</style>
 </head>
 <body>
 
@@ -26,7 +20,7 @@
 		When I click on "Load Balancing and Routing"
 		And I click on "Query Routing Policies"
 		And I click on "Query routing"
-		Then "Query Routing Policies" page must be displayed
+		Then "Query Routing Policies" page should be displayed
 		And I should see "On" in "Query routing"
 
 	Scenario: add query routing table
@@ -42,18 +36,51 @@
 		Then I should see "Add rules" in "opened dialog title"
 
 	Scenario: add rule
-		When I click on "Add" button
-		And I set "Source Pattern" to "SELECT 123"
-		And I set "Route To" to "<any cluster>"
-		And I set "And/Or" to "AND"
-		And I check "Enabled" checkbox
-		And I click on "Save" button
+		When I click on "Add button"
+		And I set "Source Pattern" value to "SELECT 123"
+		And I set "Route To" value to ""
+		And I set "And/Or" value to "AND"
+		And I "check" "Enabled" checkbox
+		And I click on "Save button"
 		Then I should see "SELECT 123" in "pattern row"
 
 	Scenario: close all dialogs
 		When I click on "Close"
 		And I click on "Close"
-		Then "Clusters" page should be displayed</div>
+		Then "Clusters" page should be displayed
+</div>
+
+<div id="status" class="fail"></div>
+
+<div id="sidebar">
+	<nav>
+	  <div class="nav nav-tabs" id="nav-tab" role="tablist">
+	    <a class="nav-item nav-link active" data-toggle="tab" href="#nav-env" role="tab" aria-controls="nav-env" aria-selected="true">Environment</a>
+	    <a class="nav-item nav-link" data-toggle="tab" href="#nav-sel" role="tab" aria-controls="nav-sel" aria-selected="false">Selectors</a>
+	    <a class="nav-item nav-link" data-toggle="tab" href="#nav-exe" role="tab" aria-controls="nav-exe" aria-selected="false">Execution</a>
+	  </div>
+	</nav>
+
+	<div class="tab-content" id="nav-tabContent">
+	  <div class="tab-pane fade show active" id="nav-env" role="tabpanel" aria-labelledby="nav-env-tab">
+		<div id="envds" class="my-2"></div>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="buttongroup mx-3 ml-auto">
+ 					<button type="button" class="btn btn-secondary btn-sm px-3">Edit Environment</button>
+				</div>
+			</div>
+		</div>
+	  </div>
+
+	  <div class="tab-pane fade" id="nav-sel" role="tabpanel" aria-labelledby="nav-sel-tab">
+		<div id="selectors"></div>
+	  </div>
+
+	  <div class="tab-pane fade" id="nav-exe" role="tabpanel" aria-labelledby="nav-exe-tab">
+	  </div>
+	</div>
+</div>
 
 <script src="dist/index.js"></script>
 
