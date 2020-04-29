@@ -21380,12 +21380,23 @@ parser.symbolicNames.forEach((symbolicName, i) => {
     antlrTokenNameToAceTokenType[symbolicName] = type || 'text';
 });
 
+const snippetPredictor = function(priorText) {
+    // a fast shortcut
+    // todo: swap autlr4-autosuggest to antlr4-c3 and remove this
+    const lastToken = priorText.trim().replace(/.*\s/g, '').toLowerCase();
+    if (lastToken == 'when' || lastToken == 'then' || lastToken == 'given') {
+        return snippets.filter(s => s.meta == lastToken);
+    }
+    return null;
+};
+
 return {
     Lexer: Lexer,
     Parser: Parser,
     entryPoint: entryPoint,
     antlrTokenNameToAceTokenType: antlrTokenNameToAceTokenType,
     snippets: snippets,
+    snippetPredictor: snippetPredictor
 };
 
 }).call(exports, __webpack_require__, exports, module),
