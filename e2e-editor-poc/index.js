@@ -86,6 +86,45 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./images/run-fail.svg":
+/*!*****************************!*\
+  !*** ./images/run-fail.svg ***!
+  \*****************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "ee5120fcde039bd2fcca43717fd6bfb7.svg");
+
+/***/ }),
+
+/***/ "./images/run-ok.svg":
+/*!***************************!*\
+  !*** ./images/run-ok.svg ***!
+  \***************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "fe216d3178ac486a94a72a8740043678.svg");
+
+/***/ }),
+
+/***/ "./images/run-progress.svg":
+/*!*********************************!*\
+  !*** ./images/run-progress.svg ***!
+  \*********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "af49a48f61409bbfc73464a0b764610f.svg");
+
+/***/ }),
+
 /***/ "./node_modules/@fortawesome/fontawesome-free/css/fontawesome.css":
 /*!************************************************************************!*\
   !*** ./node_modules/@fortawesome/fontawesome-free/css/fontawesome.css ***!
@@ -52534,9 +52573,16 @@ module.exports = exports;
 
 // Imports
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+var ___CSS_LOADER_GET_URL_IMPORT___ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/getUrl.js */ "./node_modules/css-loader/dist/runtime/getUrl.js");
+var ___CSS_LOADER_URL_IMPORT_0___ = __webpack_require__(/*! ../images/run-progress.svg */ "./images/run-progress.svg");
+var ___CSS_LOADER_URL_IMPORT_1___ = __webpack_require__(/*! ../images/run-ok.svg */ "./images/run-ok.svg");
+var ___CSS_LOADER_URL_IMPORT_2___ = __webpack_require__(/*! ../images/run-fail.svg */ "./images/run-fail.svg");
 exports = ___CSS_LOADER_API_IMPORT___(false);
+var ___CSS_LOADER_URL_REPLACEMENT_0___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_0___);
+var ___CSS_LOADER_URL_REPLACEMENT_1___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_1___);
+var ___CSS_LOADER_URL_REPLACEMENT_2___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_2___);
 // Module
-exports.push([module.i, "@keyframes beat {\n\tfrom { right: 0; top: 0; height: 100%; width: 100%; }\n\tto { right: -5%; top: -5%; height: 110%; width: 110%; }\n}\n\nbody { display: inherit; margin: 0; background: #2F3129; }\n\n#editor {\n\tposition: absolute;\n\tleft: 0; top: 0; right: 350px; bottom: 0;\n\tdisplay: none;\n}\n#editor.ace_editor { display: block; }\ndiv.ace_editor.ace_autocomplete { width: 600px; }\n\n#status {\n\tbackground: url(/images/run-progress.svg);\n\tbackground-repeat: no-repeat;\n\tbackground-size: 100% 100%;\n    position: absolute;\n\tbottom: 20px; right: 10px;\n    width: 100px; height: 100px;\n    filter: blur(0.5px); opacity: 0.2;\n\toverflow: visible;\n\tborder-radius: 50%;\n\tz-index: 100;\n}\n#status.ok { background: url(/images/run-ok.svg); opacity: 1; }\n#status.fail { background: url(/images/run-fail.svg); opacity: 1; }\n#status.fail::before {\n\tcontent: '';\n    display: block;\n    position: absolute;\n\tbackground: inherit;\n\tbackground-repeat: no-repeat;\n\tbackground-size: 100% 100%;\n\tborder-radius: inherit;\n\topacity: 0.65; filter: blur(2px);\n\tanimation: beat 1.5s cubic-bezier(0.24, 0, 0.38, 1) infinite alternate;\n\tz-index: 99;\n}\n\n#sidebar {\n\tposition: absolute;\n\ttop: 0px; bottom: 0px;\n\tright: 0; width: 340px;\n\tbackground: #2F3129;\n\tcolor: #8F908A;\n}\n\n@media (max-width: 1000px) {\n\t#editor { right: 0px; }\n\t#sidebar { display: none; }\n}\n\n.bstreeview { margin-top: 5px; background-color: inherit; border: none; border-radius: 0; }\n.bstreeview .list-group-item { background-color: inherit; border-color: #444; color: #bbb; padding: 0.1rem; }\n.bstreeview .list-group-item:hover { background-color: inherit; }\n\n.nav { margin-top: 10px; }\n.nav-link { padding: 0.2rem 0.5rem; font-size: 80%; color: inherit !important; }\n.nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link { background-color: inherit; border-bottom: 1px solid #2F3129; }\n\n.list-group-item { font-size: 80%; }\n", ""]);
+exports.push([module.i, "@keyframes beat {\n\tfrom { right: 0; top: 0; height: 100%; width: 100%; }\n\tto { right: -5%; top: -5%; height: 110%; width: 110%; }\n}\n\nbody { display: inherit; margin: 0; background: #2F3129; }\n\n#editor {\n\tposition: absolute;\n\tleft: 0; top: 0; right: 350px; bottom: 0;\n\tdisplay: none;\n}\n#editor.ace_editor { display: block; }\ndiv.ace_editor.ace_autocomplete { width: 600px; }\n\n#status {\n\tbackground: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n\tbackground-repeat: no-repeat;\n\tbackground-size: 100% 100%;\n    position: absolute;\n\tbottom: 20px; right: 10px;\n    width: 100px; height: 100px;\n    filter: blur(0.5px); opacity: 0.2;\n\toverflow: visible;\n\tborder-radius: 50%;\n\tz-index: 100;\n}\n#status.ok { background: url(" + ___CSS_LOADER_URL_REPLACEMENT_1___ + "); opacity: 1; }\n#status.fail { background: url(" + ___CSS_LOADER_URL_REPLACEMENT_2___ + "); opacity: 1; }\n#status.fail::before {\n\tcontent: '';\n    display: block;\n    position: absolute;\n\tbackground: inherit;\n\tbackground-repeat: no-repeat;\n\tbackground-size: 100% 100%;\n\tborder-radius: inherit;\n\topacity: 0.65; filter: blur(2px);\n\tanimation: beat 1.5s cubic-bezier(0.24, 0, 0.38, 1) infinite alternate;\n\tz-index: 99;\n}\n\n#sidebar {\n\tposition: absolute;\n\ttop: 0px; bottom: 0px;\n\tright: 0; width: 340px;\n\tbackground: #2F3129;\n\tcolor: #8F908A;\n}\n\n@media (max-width: 1000px) {\n\t#editor { right: 0px; }\n\t#sidebar { display: none; }\n}\n\n.bstreeview { margin-top: 5px; background-color: inherit; border: none; border-radius: 0; }\n.bstreeview .list-group-item { background-color: inherit; border-color: #444; color: #bbb; padding: 0.1rem; }\n.bstreeview .list-group-item:hover { background-color: inherit; }\n\n.nav { margin-top: 10px; }\n.nav-link { padding: 0.2rem 0.5rem; font-size: 80%; color: inherit !important; }\n.nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link { background-color: inherit; border-bottom: 1px solid #2F3129; }\n\n.list-group-item { font-size: 80%; }\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -67807,7 +67853,7 @@ oop.inherits(Mode, TextMode);
     this.lineCommentStart = "#";
 
     this.createWorker = function(session) {
-        var worker = new WorkerClient(["ace"], "ace/mode/antlr4_worker", "Antlr4Worker", "dist/worker-antlr4.js");
+        var worker = new WorkerClient(["ace"], "ace/mode/antlr4_worker", "Antlr4Worker", "worker-antlr4.js");
         worker.attachToDocument(session.getDocument());
         worker.on("errors", (e) => session.setAnnotations(e.data));
         worker.on("annotate", (e) => session.setAnnotations(e.data));
@@ -68504,8 +68550,9 @@ module.exports = content.locals || {};
 /***/ (function(module, exports, __webpack_require__) {
 
 const ace = __webpack_require__(/*! ace */ "./node_modules/ace/lib/ace/ace.js");
-const aceLangTools = __webpack_require__(/*! ace/ext/language_tools */ "./node_modules/ace/lib/ace/ext/language_tools.js");
+const Range = __webpack_require__(/*! ace/range */ "./node_modules/ace/lib/ace/range.js").Range;
 const Autocomplete = __webpack_require__(/*! ace/autocomplete */ "./node_modules/ace/lib/ace/autocomplete.js").Autocomplete;
+const aceLangTools = __webpack_require__(/*! ace/ext/language_tools */ "./node_modules/ace/lib/ace/ext/language_tools.js");
 const Antl4rMode = __webpack_require__(/*! ace/mode/antlr4 */ "./src/ace/mode/antlr4.js").Mode;
 const aceTheme = __webpack_require__(/*! ace/theme/monokai */ "./node_modules/ace/lib/ace/theme/monokai.js");
 const grammar = __webpack_require__(/*! grammar/devfactory/e2e */ "./src/grammar/devfactory/e2e/index.js");
@@ -68524,6 +68571,7 @@ const editor = ace.edit("editor", {
     showPrintMargin: false,
     enableBasicAutocompletion: true,
     enableLiveAutocompletion: false, // use a custom one below
+    fontSize: '10pt',
 });
 
 editor.session.setMode(aceMode);
@@ -68533,6 +68581,7 @@ editor.renderer.setTheme(aceTheme);
 aceLangTools.setCompleters([ aceLangTools.keyWordCompleter ]);
 
 // autocomplete even if there's no prefix, because we're checking the syntax tree
+/*
 const alwaysLiveAutocomplete = function(e) {
     const editor = e.editor;
     const hasCompleter = editor.completer && editor.completer.activated;
@@ -68546,6 +68595,20 @@ const alwaysLiveAutocomplete = function(e) {
     }
 };
 editor.commands.on('afterExec', alwaysLiveAutocomplete);
+*/
+
+// shortcut to make updating easier because of the range type
+editor.replaceVariable = function(value) {
+    const cp = editor.getCursorPosition();
+    const token = editor.getSession().getTokenAt(cp.row, cp.column);
+    if (token.type == "string" && token.value.startsWith('"') && token.value.endsWith('"')) {
+        const tokenRange = new Range(cp.row, token.start, cp.row, token.start + token.value.length);
+        editor.getSession().replace(tokenRange, '"' + value + '"');
+        return true;
+    } else {
+        return false;
+    }
+};
 
 window.editor = editor;
 
@@ -77319,7 +77382,12 @@ const selectorsTree = Object.entries(selectors).map(([name, path]) =>
     ({ text: name })
 );
 
-$('#selectors').bstreeview({ data: JSON.stringify(selectorsTree) });
+const selectorTree = $('#selectors').bstreeview({ data: JSON.stringify(selectorsTree) });
+selectorTree.click(function (event) {
+    if (!editor.replaceVariable(event.target.textContent)) {
+        alert("Place the cursor in a string variable and try clicking again");
+    }
+});
 
 var tree = [
  	{ text: "Node 1", icon: "fa fa-folder",
